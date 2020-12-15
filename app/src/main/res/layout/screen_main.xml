@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/main_screen_bg"
+    tools:context=".view.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/main_screen_bg" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scaleType="fitCenter"
+        android:src="@mipmap/passthebomb_logo"
+        ads:layout_constraintBottom_toTopOf="@+id/buttonStartGame"
+        ads:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintStart_toStartOf="parent"
+        ads:layout_constraintTop_toTopOf="@+id/imageView6" />
+
+    <Button
+        android:id="@+id/buttonStartGame"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:height="@dimen/button_height"
+        android:background="@drawable/element_button"
+        android:text="Start Game"
+        android:textSize="18sp"
+        ads:layout_constraintBottom_toBottomOf="parent"
+        ads:layout_constraintEnd_toEndOf="@+id/buttonDownloadChallengeSets"
+        ads:layout_constraintStart_toStartOf="@+id/buttonDownloadChallengeSets"
+        ads:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonDownloadChallengeSets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="@dimen/button_height"
+        android:text="Download Challenge Sets"
+        android:textSize="18sp"
+        ads:layout_constraintVertical_bias="0.76"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonMyChallengeSets"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:height="@dimen/button_height"
+        android:text="My Challenge Sets"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDownloadChallengeSets"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="@+id/buttonDownloadChallengeSets"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.63" />
+
+    <Button
+        android:id="@+id/buttonTutorialAndRules"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:height="@dimen/button_height"
+        android:text="Tutorial And Rules"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buttonDownloadChallengeSets"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buttonDownloadChallengeSets"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
