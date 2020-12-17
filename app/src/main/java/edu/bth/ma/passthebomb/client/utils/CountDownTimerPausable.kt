@@ -78,8 +78,6 @@ abstract class CountDownTimerPausable(
     fun pause() {
         if (isPaused == false) {
             countDownTimer!!.cancel()
-        } else {
-            throw IllegalStateException("CountDownTimerPausable is already in pause state, start counter before pausing it.")
         }
         isPaused = true
     }
