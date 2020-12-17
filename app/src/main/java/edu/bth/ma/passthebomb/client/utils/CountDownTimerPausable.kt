@@ -74,7 +74,6 @@ abstract class CountDownTimerPausable(
      * Pauses the CountDownTimerPausable, so it could be resumed(start)
      * later from the same point where it was paused.
      */
-    @Throws(IllegalStateException::class)
     fun pause() {
         if (isPaused == false) {
             countDownTimer!!.cancel()

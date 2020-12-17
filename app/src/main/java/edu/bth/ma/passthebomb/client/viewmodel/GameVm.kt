@@ -92,7 +92,7 @@ class GameVm : ViewModel() {
         val currentChallenge = challenges[currentChallengeIndex]
         this.currentChallenge.value = currentChallenge
         secondsLeft.value = (currentChallenge.timeLimit * gameSettings.value!!.timeModifier).toFloat()
-        val millisForChallenge: Long = (currentChallenge.timeLimit * 1000 * gameSettings.value!!.timeModifier).toLong()
+        val millisForChallenge: Long = (secondsLeft.value!! * 1000).toLong()
         countDownTimer = BombCountDownTimer(millisForChallenge)
         countDownTimer?.start()
     }
@@ -212,7 +212,7 @@ class GameVm : ViewModel() {
         }
 
         override fun onTick(millisUntilFinished: Long) {
-            secondsLeft.value = secondsLeft.value?.minus(0.1f)
+            secondsLeft.value = millisUntilFinished / 1000f
         }
 
     }
